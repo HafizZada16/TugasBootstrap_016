@@ -6,146 +6,355 @@
     <title>Company Products</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Company Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="https://cdn.discordapp.com/attachments/691141876211777610/1369278149925408808/20200624_125613.jpg?ex=682d1366&is=682bc1e6&hm=000d1fefe847165559210704da055d0a0680eb97c24ed866e5955cdd188eeeb0&" alt="Logo" height="40" class="me-2">
+                    <span class="fs-4 text-primary">HapizHosting</span>
+                </a>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Items -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                MC Servers
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                                <div class="d-flex align-items-center p-2">
+                                    <img src="https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP" 
+                                        alt="Minecraft Java" class="me-2" style="width: 30px; height: 30px;">
+                                    <div>
+                                        <h6 class="mb-0">Basic Server</h6>
+                                        <small class="text-muted">Mulai dari $10</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <div class="d-flex align-items-center p-2">
+                                    <img src="https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP" 
+                                        alt="Minecraft Java Budget" class="me-2" style="width: 30px; height: 30px;">
+                                    <div>
+                                        <h6 class="mb-0">Premium Server</h6>
+                                        <small class="text-muted">Mulai dari $25</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <div class="d-flex align-items-center p-2">
+                                    <img src="https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP" 
+                                        alt="Minecraft Bedrock" class="me-2" style="width: 30px; height: 30px;">
+                                    <div>
+                                        <h6 class="mb-0">Ultimate Server</h6>
+                                        <small class="text-muted">Mulai dari $50</small>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Domain</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fitur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dukungan</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right Side Items -->
+                    <div class="ms-auto d-flex align-items-center">
+                        <div class="dropdown me-3">
+                            <button class="btn btn-link text-dark text-decoration-none" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-globe"></i> ID
+                            </button>
+                        </div>
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+            </div>
+        </nav>
+
+        <!-- Product Section -->
+        <div class="container my-5">
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border border-2">
+                        <img src="https://i.ytimg.com/vi/_uquQcEfBBw/maxresdefault.jpg" class="card-img-top" alt="Sewa Server Minecraft">
+                        <div class="card-body">
+                            <h5 class="card-title">Basic Server Package</h5>
+                            <p class="card-text">Perfect for small groups and casual players. Ideal for vanilla Minecraft experience.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">CPU: Intel Xeon E3-1230</li>
+                                <li class="list-group-item">RAM: 8GB DDR4</li>
+                                <li class="list-group-item">Storage: 250GB SSD</li>
+                                <li class="list-group-item">Players: Up to 20</li>
+                                <li class="list-group-item">Price: $10/month</li>
+                            </ul>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border border-2">
+                        <img src="https://images3.alphacoders.com/118/thumb-1920-1184187.jpg" class="card-img-top" alt="Sewa Server Minecraft">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Server Package</h5>
+                            <p class="card-text">Ideal for modded servers and medium-sized communities.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">CPU: Intel Xeon E5-2670</li>
+                                <li class="list-group-item">RAM: 16GB DDR4</li>
+                                <li class="list-group-item">Storage: 500GB SSD</li>
+                                <li class="list-group-item">Players: Up to 50</li>
+                                <li class="list-group-item">Price: $25/month</li>
+                            </ul>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border border-2">
+                        <img src="https://images2.alphacoders.com/135/thumb-1920-1353836.png" class="card-img-top" alt="Sewa Server Minecraft">
+                        <div class="card-body">
+                            <h5 class="card-title">Ultimate Server Package</h5>
+                            <p class="card-text">Perfect for large communities and heavy modpacks or plugin.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">CPU: AMD EPYC 7443P</li>
+                                <li class="list-group-item">RAM: 32GB DDR4</li>
+                                <li class="list-group-item">Storage: 1TB NVMe SSD</li>
+                                <li class="list-group-item">Players: Up to 100</li>
+                                <li class="list-group-item">Price: $50/month</li>
+                            </ul>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .server-type img {
+                width: 64px;
+                height: 64px;
+                object-fit: contain;
+                margin: 10px;
+            }
+            .server-type {
+                padding: 15px;
+                text-align: center;
+            }
+        </style>
+
+        <div class="container my-5 text-center">
+            <h2>Minecraft Hosting Server</h2>
+            <p class="lead">HapizHosting menawarkan hosting server Minecraft tercepat, paling andal, dan murah. Dengan instalasi sekali klik, Anda dapat memuat 1.000+ modpack unik. Jika Anda membeli server sekarang, kami akan memberikan diskon 50% untuk faktur pertama Anda. Berikut daftar lengkap server kami yang tersedia:</p>
+
+            <div class="row justify-content-center my-4">
+                <div class="col-auto server-type">
+                    <img src="https://images.icon-icons.com/2699/PNG/512/minecraft_logo_icon_168974.png" class="server-icon" alt="Standard">
+                    <p class="mt-2 mb-0">Standard</p>
+                </div>
+                <div class="col-auto server-type">
+                    <img src="https://avatars.githubusercontent.com/u/4350249?s=280&v=4" class="server-icon" alt="Spigot">
+                    <p class="mt-2 mb-0">Spigot</p>
+                </div>
+                <div class="col-auto server-type">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTxAyHpzwuGjS7w4XZap_RdRtiC-Rq1FWuNw&s" class="server-icon img-fluid" alt="PaperMC">
+                    <p class="mt-2 mb-0">PaperMC</p>
+                </div>
+                <div class="col-auto server-type">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMDOQuWXEPHNRgjyEFiYFDwBBlqJ2OY5Wqwg&s" class="server-icon" alt="BungeeCord">
+                    <p class="mt-2 mb-0">BungeeCord</p>
+                </div>
+                <div class="col-auto server-type">
+                    <img src="https://avatars.githubusercontent.com/u/7068667?s=280&v=4" class="server-icon" alt="ATLauncher">
+                    <p class="mt-2 mb-0">ATLauncher</p>
+                </div>
+                <div class="col-auto server-type">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/15a10966-3031-4c71-9c5d-0b2aa31b1af2/dfvkx77-cc87588e-be1b-431c-9713-0c7c5bf77f88.png/v1/fill/w_512,h_512/curseforge_honeycomb_icon_orange_by_stinkyduper_dfvkx77-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvMTVhMTA5NjYtMzAzMS00YzcxLTljNWQtMGIyYWEzMWIxYWYyXC9kZnZreDc3LWNjODc1ODhlLWJlMWItNDMxYy05NzEzLTBjN2M1YmY3N2Y4OC5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.nQkmKx9DPSeALpmI5eQFiAX0gzW4GgP3C1Eo67qokl0" class="server-icon" alt="CurseForge">
+                    <p class="mt-2 mb-0">CurseForge</p>
+                </div>
+                <div class="col-auto server-type">
+                    <img src="https://avatars.githubusercontent.com/u/21025855?s=280&v=4" class="server-icon" alt="Fabric">
+                    <p class="mt-2 mb-0">Fabric</p>
+                </div>
+                <div class="col-auto server-type">
+                    <img src="https://pt.minecraft.wiki/images/thumb/Minecraft_Forge_logo.png/640px-Minecraft_Forge_logo.png?52510" class="server-icon" alt="Forge">
+                    <p class="mt-2 mb-0">Forge</p>
+            </div>
+
+            <button class="btn btn-primary btn-lg">Dapatkan Server Anda</button>
+        </div>
+
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ytimg.com/vi/_uquQcEfBBw/maxresdefault.jpg" alt="Fitur Pembayaran Online" class="d-block w-100">
+                            <div class="carousel-caption shadow-lg">
+                                <h3>Pembayaran Online Mudah</h3>
+                                <p>Nikmati berbagai pilihan pembayaran online yang aman dan nyaman.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images3.alphacoders.com/118/thumb-1920-1184187.jpg" alt="Proses Checkout Cepat" class="d-block w-100">
+                            <div class="carousel-caption shadow-lg">
+                                <h3>Proses Checkout Cepat</h3>
+                                <p>Selesaikan transaksi dengan cepat dan tanpa ribet.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images2.alphacoders.com/135/thumb-1920-1353836.png" alt="Keamanan Terjamin" class="d-block w-100">
+                            <div class="carousel-caption shadow-lg">
+                                <h3>Keamanan Terjamin</h3>
+                                <p>Belanja dengan tenang dengan sistem keamanan terjamin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .carousel-caption {
+                            background: rgba(0, 0, 0, 0.2);
+                            border-radius: var(--bs-border-radius);
+                            backdrop-filter: blur(2px);
+                            padding: 1.5rem;
+                            bottom:2rem;
+                        }
+
+                        .carousel-caption h3 {
+                            font-weight: 600;
+                            color: var(--bs-white);
+                        }
+
+                        .carousel-caption p {
+                            color: var(--bs-gray-200);
+                        }
+                    </style>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-    </nav>
-
-    <!-- Product Section -->
-    <div class="container my-5">
-        <div class="row">
-            <!-- Product 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://cms-assets.xboxservices.com/assets/22/3a/223a1521-60cf-4a82-b708-c5f2fdfcf163.jpg?n=Minecraft-Vanilla_Sneaky-Slider-1084_Spring-to-Life_1600x675.jpg" class="card-img-top" alt="Sewa Server Minecraft">
-                    <div class="card-body">
-                        <h5 class="card-title">Sewa Server Minecraft</h5>
-                        <p class="card-text">Dapatkan server Minecraft dengan performa tinggi untuk bermain bersama teman-teman Anda. Harga terjangkau dan uptime 99.9%!</p>
-                        <!-- List of Server Specifications -->
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">CPU: Intel Xeon E5-2670</li>
-                            <li class="list-group-item">RAM: 16GB DDR4</li>
-                            <li class="list-group-item">Storage: 500GB SSD</li>
-                            <li class="list-group-item">Network: 1Gbps Uplink</li>
-                            <li class="list-group-item">Uptime: 99.9%</li>
-                        </ul>
-                        <div class="d-flex justify-content-center mt-3">
-                            <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://play-lh.googleusercontent.com/gfNz1N2GNi5piz24IB08RQ4ZGfUnN_kOH8Edhh7uCiotI2P7IBWBXdHzR8gC01ppNnU=w720-h405-rw" class="card-img-top" alt="Sewa Server Minecraft">
-                    <div class="card-body">
-                        <h5 class="card-title">Sewa Server Minecraft</h5>
-                        <p class="card-text">Dapatkan server Minecraft dengan performa tinggi untuk bermain bersama teman-teman Anda. Harga terjangkau dan uptime 99.9%!</p>
-                        <!-- List of Server Specifications -->
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">CPU: Intel Xeon E5-2670</li>
-                            <li class="list-group-item">RAM: 16GB DDR4</li>
-                            <li class="list-group-item">Storage: 500GB SSD</li>
-                            <li class="list-group-item">Network: 1Gbps Uplink</li>
-                            <li class="list-group-item">Uptime: 99.9%</li>
-                        </ul>
-                        <div class="d-flex justify-content-center mt-3">
-                            <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://i.ytimg.com/vi/_uquQcEfBBw/maxresdefault.jpg" class="card-img-top" alt="Sewa Server Minecraft">
-                    <div class="card-body">
-                        <h5 class="card-title">Sewa Server Minecraft</h5>
-                        <p class="card-text">Dapatkan server Minecraft dengan performa tinggi untuk bermain bersama teman-teman Anda. Harga terjangkau dan uptime 99.9%!</p>
-                        <!-- List of Server Specifications -->
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">CPU: Intel Xeon E5-2670</li>
-                            <li class="list-group-item">RAM: 16GB DDR4</li>
-                            <li class="list-group-item">Storage: 500GB SSD</li>
-                            <li class="list-group-item">Network: 1Gbps Uplink</li>
-                            <li class="list-group-item">Uptime: 99.9%</li>
-                        </ul>
-                        <div class="d-flex justify-content-center mt-3">
-                            <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="demo" class="carousel slide" data-bs-ride="carousel"> 
-        <!-- Indicators/dots --> 
-        <div class="carousel-indicators"> 
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button> 
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button> 
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button> 
-        </div> 
-        <!-- The slideshow/carousel --> 
-        <div class="carousel-inner"> 
-            <div class="carousel-item active"> 
-                <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/topic-los-angeles-gettyimages-943489042-feature?_a=BAVAZGDX0" alt="Los Angeles" class="d-block w-100"> 
-            </div> 
-            <div class="carousel-item"> 
-                <img src="https://content.r9cdn.net/rimg/dimg/77/c5/ecbd6c26-city-12514-1632c25b47a.jpg?width=1366&height=768&xhint=1828&yhint=1404&crop=true" alt="Chicago" class="d-block w-100"> 
-            </div> 
-            <div class="carousel-item"> 
-                <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1200,h_630,g_auto/dpr_auto/f_auto/q_auto:eco/v1/new-york-city-edted?_a=BAVAZGDX0" alt="New York" class="d-block w-100"> 
-            </div> 
-        </div> 
-        <!-- Left and right controls/icons --> 
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"> 
-            <span class="carousel-control-prev-icon"></span> 
-        </button> 
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"> 
-            <span class="carousel-control-next-icon"></span> 
-        </button> 
-    </div> 
-
-    <div class="mt-4 p-5 bg-primary text-white rounded"> 
-        <h1>Jumbotron Example</h1> 
-        <p>Lorem ipsum...</p> 
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-    </footer>
+<footer class="bg-dark text-white pt-5 pb-4 w-100">
+    <div class="container">
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-4">HapizHosting</h5>
+                <p class="small">Penyedia layanan hosting game terbaik dengan performa tinggi dan harga terjangkau.</p>
+                <div class="mt-4">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-discord"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-4">Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Game Servers</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Domain</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Fitur</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-4">Support</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Discord Community</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Knowledge Base</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-uppercase mb-4">Contact</h5>
+                <p class="small mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Jakarta, Indonesia</p>
+                <p class="small mb-2"><i class="bi bi-envelope-fill me-2"></i>support@hapizhosting.com</p>
+                <p class="small mb-2"><i class="bi bi-telephone-fill me-2"></i>+62 812-3456-7890</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <hr class="bg-light">
+                <p class="text-center small mb-0">
+                    &copy; 2025 HapizHosting. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
